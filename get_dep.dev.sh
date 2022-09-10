@@ -4,6 +4,7 @@ if ! [ -x "$(command -v sudo)" ]; then
   alias sudo=''
 fi
 
+sudo apt-get install wget
 sudo apt-get -y install cmake
 sudo apt-get -y install libboost-all-dev
 sudo apt-get -y install libopenblas-dev
@@ -15,7 +16,7 @@ echo "--------------------------------"
 echo "working on armadillo ..."
 mkdir -p armadillo
 cd armadillo
-wget https://kent.dl.sourceforge.net/project/arma/armadillo-10.4.1.tar.xz
+wget https://sourceforge.net/projects/arma/files/armadillo-10.4.1.tar.xz
 tar -xvf armadillo-10.4.1.tar.xz --strip-components 1
 rm armadillo-10.4.1.tar.xz
 ./configure
